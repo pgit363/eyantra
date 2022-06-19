@@ -9,6 +9,6 @@ const app = createApp({})
 
 app.component('hello-world', HelloWorld)
 app.component('yrc', Yrc)
-app.component('users', Users)
+app.component('Users', Users)
 
 app.mount('#app')

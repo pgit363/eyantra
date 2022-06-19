@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 require('laravel-mix-blade-reload');
+const path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -20,4 +21,7 @@ mix.webpackConfig({
     stats: {
         children: true,
     },
+});
+mix.alias({
+    '@': path.join(__dirname, 'resources/js')
 });

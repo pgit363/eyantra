@@ -15,8 +15,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/registration', function () {
     return view('welcome');
+});
+
+Route::get('/users', function () {
+    return view('users');
 });
 
 Route::get('get_countries', [CountryCollegeController::class, 'getCountries']);
