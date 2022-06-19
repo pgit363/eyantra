@@ -23,7 +23,7 @@
     <body class="antialiased">
         <div id="app">
             <div>
-                <yrc/>
+                <users/>
             </div>
         </div>
 

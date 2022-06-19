@@ -13,7 +13,6 @@
                         <label>Select Country:</label>
                         <select class='form-control' v-model='country' @change='getColleges()'>
                             <option value='0'>Select Country</option>
-                            <!-- <option v-for='data in countries' :value='data.id'>{{ data.name }}</option> -->
                             <option v-for="(country, index) in countries" :value='country.id' :key="index">{{ country.name }}</option>
                         </select>
                     </div>

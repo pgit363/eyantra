@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryCollegeController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('get_countries', [CountryCollegeController::class, 'getCountries']);
 Route::post('get_colleges', [CountryCollegeController::class, 'getColleges']);
+
+Route::get('get_names', [UserController::class, 'getNames']);
+Route::post('get_users', [UserController::class, 'getUsers']);

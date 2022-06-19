@@ -8,9 +8,27 @@ use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
-    public function index()
+    public function getNames(Request $request)
     {
+        Log::info("to show all data");
+        $users = User::select('id','name')->get();
+        Log::info($users);
+        return response()->json($users, 200);        
+    }
 
+    public function getUsers(Request $request)
+    {
+        Log::info("to show all data".$request->id);
+
+        $users = User::select('users.*', 'countries.name as country_name' , 'colleges.name as college_name')
+        ->join('countries', 'users.country_id', '=', 'countries.id')
+        ->join('colleges', 'users.college_id', '=', 'colleges.id')
+        ->where('users.id', $request->id)
+        ->get(); // or first() 
+
+        // $users = User::where('id', $request->id)->get();
+        Log::info($users);
+        return response()->json($users, 200);        
     }
 
     public function store(Request $request)
