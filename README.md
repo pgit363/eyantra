@@ -1,12 +1,12 @@
-steps 
+steps
 
 * composer install
 * npm install
 * php artisan migrate
+* php artisan db:seed
 * php artisan key:generate
 * php artisan serve
 * npm run watch / npm run hot
-
 
 URL for Access
 
