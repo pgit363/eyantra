@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CountryCollegeController;
-use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +14,14 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/registration', function () {
-    return view('welcome');
-});
+// Route::get('/registration', function () {
+//     return view('welcome');
+// });
 
-Route::get('/users', function () {
+// Route::get('/users', function () {
+//     return view('users');
+// });
+Route::get('/{any}', function () {
     return view('users');
-});
+})->where('any','.*');
 
-Route::get('get_countries', [CountryCollegeController::class, 'getCountries']);
-Route::post('get_colleges', [CountryCollegeController::class, 'getColleges']);
-
-Route::get('get_names', [UserController::class, 'getNames']);
-Route::post('get_users', [UserController::class, 'getUsers']);

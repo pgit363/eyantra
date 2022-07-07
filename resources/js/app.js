@@ -1,14 +1,10 @@
 require('./bootstrap')
 
-import { createApp } from 'vue'
-import HelloWorld from './components/Welcome'
-import Yrc from './components/yrc'
-import Users from './components/users'
+import { createApp } from 'vue';
 
-const app = createApp({})
+import App from './layouts/App.vue';
+import router from './Router.js';
 
-app.component('hello-world', HelloWorld)
-app.component('yrc', Yrc)
-app.component('Users', Users)
-
-app.mount('#app')
+createApp(App)
+.use(router)
+.mount('#app')

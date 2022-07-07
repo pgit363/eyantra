@@ -21,11 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-        <div id="app">
-            <div>
-                <users/>
-            </div>
-        </div>
+        <div id="app"></div>
+        <script src="{{asset('js/app.js')}}"></script>
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
         <script defer src="{{ mix('js/app.js') }}"></script>    </body>
